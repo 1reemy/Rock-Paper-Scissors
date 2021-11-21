@@ -15,26 +15,25 @@ let playerSelection = input.toLowerCase();
 function playRound(playerSelection,computerSelection){
     
        if(playerSelection === 'rock' && computerSelection === 'scissors'){
-        return 'you win!!! Rock beats Scissors';
+        return 'You win!!! Rock beats Scissors';
        }
        else if(playerSelection === 'rock' && computerSelection === 'paper'){
-        return 'you lose!!! Paper beats Rock';
+        return 'You lose!!! Paper beats Rock';
        }
        else if(playerSelection === 'paper' && computerSelection === 'rock'){
-        return 'you win!!! Paper beats Rock';
+        return 'You win!!! Paper beats Rock';
        }
        else if(playerSelection === 'paper' && computerSelection === 'scissors'){
-        return 'you lose!!! Scissors beats Paper';
+        return 'You lose!!! Scissors beats Paper';
        }
        else if(playerSelection === 'scissors' && computerSelection === 'paper'){
-        return 'you win!!! Scissors beats Paper';
+        return 'You win!!! Scissors beats Paper';
        }
        else if(playerSelection === 'scissors' && computerSelection === 'rock'){
-        return 'you lose!!! Scissors beats Rock';
+        return 'You lose!!! Scissors beats Rock';
        }
        else{
         return 'Tie!!! Try again!';
        }
 }
-
 console.log(playRound(playerSelection,computerSelection));
