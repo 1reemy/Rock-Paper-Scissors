@@ -7,33 +7,55 @@ function computerPlay(){
     return com;
 }
 
-const computerSelection = computerPlay();
+let score = [];
 
+function playRound(){
+
+const computerSelection = computerPlay();    
 const input = prompt('Select Rock, Paper or Scissors');
 let playerSelection = input.toLowerCase();
-
-function playRound(playerSelection,computerSelection){
-    
+        
        if(playerSelection === 'rock' && computerSelection === 'scissors'){
-        return 'You win!!! Rock beats Scissors';
+        console.log('You win!!! Rock beats Scissors');
+        score.push(1);        
        }
        else if(playerSelection === 'rock' && computerSelection === 'paper'){
-        return 'You lose!!! Paper beats Rock';
+        console.log('You lose!!! Paper beats Rock');
+        score.push(0);        
        }
        else if(playerSelection === 'paper' && computerSelection === 'rock'){
-        return 'You win!!! Paper beats Rock';
+        console.log('You win!!! Paper beats Rock');
+        score.push(1);        
        }
        else if(playerSelection === 'paper' && computerSelection === 'scissors'){
-        return 'You lose!!! Scissors beats Paper';
+        console.log('You lose!!! Scissors beats Paper');
+        score.push(0);        
        }
        else if(playerSelection === 'scissors' && computerSelection === 'paper'){
-        return 'You win!!! Scissors beats Paper';
+        console.log('You win!!! Scissors beats Paper');
+        score.push(1);        
        }
        else if(playerSelection === 'scissors' && computerSelection === 'rock'){
-        return 'You lose!!! Scissors beats Rock';
+        console.log('You lose!!! Rock beats Scissors');
+        score.push(0);        
        }
        else{
-        return 'Tie!!! Try again!';
+        console.log('Tie!!! Try again!');                
+       } 
+       let sum = 0;
+       for(let i = 0; i < score.length; i++){
+           sum += score[i];           
+       } 
+       if(sum > 2){
+           return 'You Win!!! You won ' + sum + ' rounds';
+       } else{
+           return 'You Lose....Try Again!';
        }
 }
-console.log(playRound(playerSelection,computerSelection));
+function game(){
+    for(let round = 0; round < 4; round++){
+        playRound()[round];
+    }
+    return playRound();    
+};
+console.log(game());
