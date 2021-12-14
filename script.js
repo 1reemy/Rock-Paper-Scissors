@@ -1,11 +1,11 @@
 console.log('Rock, Paper, Scissors!!!');
 
-const display = document.querySelector('#display');
+const message = document.querySelector('#message');
 const rock = document.querySelector('#rock'); 
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 const reset = document.querySelector('#reset');
-let btnPress = document.querySelectorAll('button');
+let btnPress = document.querySelectorAll('input');
 const scorePlayer = document.querySelector('#playerScore');
 const pc = document.querySelector('#pc');
 
@@ -16,23 +16,26 @@ const result = document.createElement('h2');
 const stats = document.createElement('h2');
 let player = document.createElement('h1');
 let pcScore = document.createElement('h1');
+//let reset = prompt();
 
-video.style.cssText = 'background-color: black';
-welcome.style.cssText = 'color: green';
-choice.style.cssText = 'color: green';
+video.style.cssText = (
+    'background-color: black; display:flex; flex-direction:column; justify-content:center; align-items: center; border-radius: 30px; margin: auto 320px auto 320px;padding:0px 20px 0px 20px'
+    );
+welcome.style.cssText = 'color: aquamarine; margin-bottom:0px';
+choice.style.cssText = 'color: aquamarine; margin-bottom:0px';
 result.style.cssText = 'color: green';
 stats.style.cssText = 'color: gold';
-player.style.cssText = 'color: red';
-pcScore.style.cssText = 'color: red';
+player.style.cssText = 'color: red; display: flex; justify-content: center';
+pcScore.style.cssText = 'color: red; display: flex; justify-content: center';
 
-welcome.textContent = "Welcome to a game of Rock, Paper, Scissors!!!";
-choice.textContent = "Make your choice from one of the buttons below";
+welcome.textContent = "You vs the computer! 5 shots is all it takes to win!!!";
+choice.textContent = "Use the Rock, Paper or Scissors to beat the machine!!!";
 
 video.appendChild(welcome);
 video.appendChild(choice);
 video.appendChild(result);
 video.appendChild(stats);
-display.appendChild(video);
+message.appendChild(video);
 scorePlayer.appendChild(player);
 pc.appendChild(pcScore);
 
@@ -102,24 +105,29 @@ btnPress.forEach((button) =>{
         computerSelection = computerPlay();
         
         function winner(){
-            if(playerScore > computerScore){
-                stats.textContent = "You Won The Battle!!!";
-            }else{
-                stats.textContent = "You Lost The Battle But Will You Lose The War?";
-            }
+            if(playerScore > computerScore){                  
+                if(window.confirm("You Won The Battle!!! Want to go another round?")){
+                    location.reload();
+                }                                             
+            }else{                
+                if(window.confirm("You got K.Oed...Want to go another round?")){
+                    location.reload();
+                }                               
+            }            
         }
         if(playerScore === 5 || computerScore === 5){
             winner(); 
             rock.setAttribute('disabled','disabled');
             paper.setAttribute('disabled','disabled');
             scissors.setAttribute('disabled','disabled');           
-        }else{
-            stats.textContent = "Onward!!!";            
+        }        
+        else{
+            stats.textContent = "Next Shot!";            
         }
                                                       
     })
 });
 
-reset.addEventListener('click',() =>{
+/*reset.addEventListener('click',() =>{
         document.location.href = "";        
-});
+});*/
