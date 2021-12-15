@@ -1,0 +1,71 @@
+#playerScore{
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-color: green;
+    width: 10%;    
+}
+#pc{
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-color: green;
+    width: 10%;            
+}
+#scoreboard{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+    height: 25%;
+    width: 1000px;
+    margin: auto;
+}
+#vs{
+    margin:25px 20px 0px 20px;    
+}
+#display{
+    display: flex; 
+    flex-direction: column;   
+    justify-content: center;
+    width: 1000px;
+    height: 450px;
+    margin: 50px auto 50px auto;
+    background-image: url('https://user-images.githubusercontent.com/66215320/145697082-b7e4d0b4-1296-4eb5-8196-81de05c41416.jpeg');
+    padding: 80px 0px 80px 0px;        
+}
+#playerSelection{
+    display:flex;
+    justify-content: center; 
+    margin-top: 30px;   
+}
+#game{
+    display:flex;
+    justify-content: center;
+}
+body{
+    background-color: aquamarine;    
+}
+input{
+    width: 100px;
+}
+#paper{
+    padding: 0px 30px 0px 30px;
+}
+header{
+    margin:auto;
+    height:50px;
+    display: flex;
+    align-items: center;    
+}
+#title{
+    font-family: "Bungee Inline", Arial;
+    font-size: 50px;
+}
+#message{
+    padding: 30px 0px 0px 0px;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+}

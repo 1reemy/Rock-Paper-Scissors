@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Rock Paper Scissors!!!</title>        
+        <title>Rock Paper Scissors!!!</title>
+        <link rel="stylesheet" href = "rps.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">        
+        <script src=script.js defer></script>        
     </head>
-    <body>
+    <body>        
         <main>
-            <div>
-                <script src=script.js></script>
-                
+            <header id='game'>
+                <p id='title'>5 SHOT K.O.</p>
+            </header>
+            
+            <div id="display">
+                <div id='scoreboard'>
+                    <div id = 'playerScore'><p>Player</p></div><h1 id='vs'>VS</h1><div id = 'pc'><p>PC</p></div>
+                    </div>
+                    <div id='message'></div>
+                <div id='playerSelection'>
+                    <input id = 'rock' type = 'image' src = 'https://user-images.githubusercontent.com/66215320/146106739-3df84ea2-8336-45ba-b4af-ad2015cf2ec1.jpg'>
+                    <input id = 'paper' type = 'image' src = 'https://user-images.githubusercontent.com/66215320/145917520-5edcac1c-7e4c-4506-9fb0-207502a06d67.jpg'>
+                    <input id = 'scissors' type = 'image' src = 'https://user-images.githubusercontent.com/66215320/145917558-9a5ecd41-00dd-4607-ab91-abde11fd7b56.jpg'>
+                    <!--<button id = 'reset'>Reset</button>-->
+                </div>
             </div>
+                        
         </main>
     </body>
+    <footer>
+        <p><a href='https://twitter.com/Reemy1_2' target="blank"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg></a>
+    </footer>
 </html>
