@@ -69,3 +69,22 @@ footer{
     flex-direction: row;
     justify-content: center;    
 }
+@media(max-width:400px){
+    body{
+        display:flex;
+        margin-top: 100px;
+    }  
+    #display{
+        height: 550px;
+    }  
+    #playerScore{
+        height: 70%
+    }
+    #pc{
+        height: 70%;
+    }
+    main{
+        position: relative;
+        right:60px;
+    }
+}
